@@ -1,5 +1,5 @@
 {
-  "name": "@shenrendao/react-native-banner-carousel",
+  "name": "react-native-banner-carousel",
   "version": "1.0.3",
   "description": "a carousel component for React Native",
   "main": "out/index.js",
