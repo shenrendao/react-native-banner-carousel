@@ -61,6 +61,10 @@ class Carousel extends React.Component {
             this.stopAutoPlay();
         }
     }
+    componentWillUnmount() {
+        var _a;
+        (_a = this.pageAnimation) === null || _a === void 0 ? void 0 : _a.stop();
+    }
     startAutoPlay() {
         this.stopAutoPlay();
         if (!this.autoPlayTimer) {
@@ -296,7 +300,8 @@ Carousel.defaultProps = {
         return react_native_1.Animated.spring(animate, {
             toValue: toValue,
             friction: 10,
-            tension: 50
+            tension: 50,
+            useNativeDriver: true,
         });
     }
 };

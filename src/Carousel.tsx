@@ -47,7 +47,8 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
             return Animated.spring(animate, {
                 toValue: toValue,
                 friction: 10,
-                tension: 50
+                tension: 50,
+                useNativeDriver: true,
             });
         }
     };
@@ -115,6 +116,10 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         } else {
             this.stopAutoPlay();
         }
+    }
+
+    public componentWillUnmount() {
+        this.pageAnimation?.stop()
     }
 
     private startAutoPlay() {
