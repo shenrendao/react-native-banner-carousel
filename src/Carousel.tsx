@@ -67,9 +67,6 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         this.state = {
             scrollValue: new Animated.Value(0)
         };
-    }
-
-    public componentWillMount() {
         this.panResponder = PanResponder.create({
             onStartShouldSetPanResponder: () => {
                 this.startPanResponder();
@@ -103,6 +100,8 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         });
     }
 
+    
+
     public componentDidMount() {
         if (this.props.autoplay) {
             this.startAutoPlay();
@@ -110,7 +109,7 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
         this.gotoPage(this.props.index + (this.props.loop ? 1 : 0), false);
     }
 
-    public componentWillReceiveProps(nextProps: CarouselProps) {
+    public UNSAFE_componentWillReceiveProps(nextProps: CarouselProps) {
         if (nextProps.autoplay) {
             this.startAutoPlay();
         } else {
