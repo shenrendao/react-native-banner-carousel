@@ -61,6 +61,7 @@ class Carousel extends React.Component {
     }
     componentWillUnmount() {
         var _a;
+        this.stopAutoPlay();
         (_a = this.pageAnimation) === null || _a === void 0 ? void 0 : _a.stop();
     }
     startAutoPlay() {

@@ -118,7 +118,8 @@ export default class Carousel extends React.Component<CarouselProps, CarouselSta
     }
 
     public componentWillUnmount() {
-        this.pageAnimation?.stop()
+        this.stopAutoPlay();
+        this.pageAnimation?.stop();
     }
 
     private startAutoPlay() {
