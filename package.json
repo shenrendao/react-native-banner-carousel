@@ -30,6 +30,6 @@
   },
   "homepage": "https://github.com/f111fei/react-native-banner-carousel",
   "devDependencies": {
-    "@types/react-native": "^0.46.9"
+    "@types/react-native": "^0.64.5"
   }
 }
